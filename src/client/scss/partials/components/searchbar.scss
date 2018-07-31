@@ -1,0 +1,32 @@
+// .search-bar, .search-bar, .search-input-wrapper {
+//   display: flex;
+//   flex-grow: 1;
+// }
+
+%flex {
+  display: flex;
+  flex: 1;
+}
+
+.search-bar {
+  @extend %flex;
+}
+
+.search-form {
+  @extend %flex;
+}
+
+.search-input-wrapper {
+  @extend %flex;
+}
+
+.search-input {
+  outline: none;
+  background-color: var(--main-bg-color);
+  margin: 0.2rem var(--main-height) 0.2rem 0.2rem;
+  width: 100%;
+}
+
+.search-input-margin {
+  margin: 0.2rem auto 0.2rem 0.2rem;
+}
