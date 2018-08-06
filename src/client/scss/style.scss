@@ -52,11 +52,11 @@ $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [r
     grid-template-rows: #{$grid-template-rows};
   }
 
-  #header,
+  header,
   #top-bar,
   #content,
-  #footer,
-  #nav {
+  footer,
+  nav {
     grid-column: col-side / col-ad;
   }
 }
@@ -72,11 +72,11 @@ $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [r
     grid-template-rows: #{$grid-template-rows};
   }
 
-  #header,
+  header,
   #top-bar,
   #content,
-  #footer,
-  #nav {
+  footer,
+  nav {
     grid-column: col-main-start / col-main-end;
   }
 
@@ -89,5 +89,4 @@ $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [r
   }
 }
 
-/* TODO:    navbar animated top border for active button */
 /* TODO:    themeing (day and night themes)*/

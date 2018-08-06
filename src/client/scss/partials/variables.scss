@@ -1,5 +1,3 @@
-$navbar-buttons: 5;
-
 // CUSTOM PROPERTIES
 :root {
   --main-bg-color: rgb(255, 255, 255);
@@ -7,7 +5,7 @@ $navbar-buttons: 5;
   // --main-height: calc((10vh+10vw)/2);
   --button-color: #555;
   --button-hover-color: #aaa;
-  --button-active-color: #333;
+  --button-active-color: rgb(20, 20, 20);
   --field-font-color: rgb(100, 100, 100);
   --field-placeholder-color: #aaa;
   --field-underline-color: #ddd;

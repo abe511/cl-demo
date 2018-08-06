@@ -4,34 +4,38 @@ import Button from './Button';
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      input: '',
+      focus: false
+    };
+
+    this.onSearchInputChange = this.onSearchInputChange.bind(this);
+    this.clearSearchInputField = this.clearSearchInputField.bind(this);
+    this.closeSearchInputField = this.closeSearchInputField.bind(this);
   }
 
-  state = {
-    input: '',
-    focus: false
-  };
-
   // records characters typed in the searchbar
-  onSearchInputChange = (event) => {
+  onSearchInputChange(event) {
     event.preventDefault();
     this.setState({ input: event.target.value });
-  };
+  }
 
   // sets the search term to empty string and keeps focus on it
-  clearSearchInputField = (event) => {
+  clearSearchInputField(event) {
     event.preventDefault();
     this.setState({ input: '' });
-    this._input.focus();
-  };
+    this.searchInput.focus();
+  }
 
   // clears the search field, unfocuses and closes it
-  closeSearchInputField = (event) => {
+  closeSearchInputField(event) {
     event.preventDefault();
     this.setState({ input: '' });
-    this._input.blur();
+    this.searchInput.blur();
     this.state.focus = false;
     this.props.closeSearchBar();
-  };
+  }
 
   render() {
     let searchInputClassName = 'search-input form-text input-field-border';
@@ -52,7 +56,9 @@ class SearchBar extends Component {
           }
           id="search-close"
           icon="fa fa-arrow-left icon-shadow"
-          onClick={(event) => this.closeSearchInputField(event)}
+          onClick={(event) => {
+            this.closeSearchInputField(event);
+          }}
         />
         <form
           className="search-form"
@@ -70,14 +76,10 @@ class SearchBar extends Component {
             onClick={(event) => {
               event.preventDefault();
               if (!this.props.searchHandle(this.state.input)) {
-                this._input.placeholder = 'Please enter a search term';
-                {
-                  /* this._input.focus();
-                this.state.focus = true; */
-                }
+                this.searchInput.placeholder = 'Please enter a search term';
               }
               if (!this.state.focus) {
-                this._input.focus();
+                this.searchInput.focus();
                 this.state.focus = true;
               }
             }}
@@ -105,11 +107,11 @@ class SearchBar extends Component {
               maxLength="111"
               aria-label="Search by name or hashtag"
               value={this.state.input}
-              ref={(element) => (this._input = element)}
+              ref={(element) => (this.searchInput = element)}
               onChange={this.onSearchInputChange}
               onKeyDown={(event) => {
                 if (event.keyCode === 13) {
-                  this._input.blur();
+                  this.searchInput.blur();
                   console.log('enter searching');
                 }
               }}

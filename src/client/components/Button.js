@@ -1,27 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Button extends Component {
-  state = {
-    isOn: false
-  };
-
-  render() {
-    // console.log(this.state);
-
-    const { className, id, role, type, icon, onClick } = this.props;
-    return (
-      <button
-        className={className}
-        id={id}
-        role={role}
-        type={type}
-        onClick={onClick}
-      >
-        <i className={icon} aria-hidden="true" />
-      </button>
-    );
-    // console.log(this.state);
-  }
-}
+const Button = (props) => {
+  const { className, id, role, type, icon, onClick } = props;
+  return (
+    <button
+      className={className}
+      id={id}
+      role={role}
+      type={type}
+      onClick={onClick}
+    >
+      <i className={icon} aria-hidden="true" />
+    </button>
+  );
+};
 
 export default Button;
