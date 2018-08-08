@@ -45,10 +45,11 @@ class NavBar extends Component {
               dataIndex="3"
             />
             <NavButton
-              to="/main"
+              to="/"
               className="navlink"
               id="map-button"
               icon="fa fa-map icon-shadow"
+              exact="true"
               dataIndex="4"
             />
           </ul>
