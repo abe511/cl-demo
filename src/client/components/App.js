@@ -37,7 +37,7 @@ class App extends Component {
                   <Route path="/messages" component={Messages} />
                   <Route path="/event" component={NewEvent} />
                   <Route path="/friends" component={Friends} />
-                  <Route path="/" component={null} exact="true" />
+                  <Route path="/" component={null} exact />
                 </div>
               </HashRouter>
               <section className="section" />
