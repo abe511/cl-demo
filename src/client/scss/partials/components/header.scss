@@ -6,21 +6,30 @@
 
 .header-title {
   @extend .header-wrapper;
-  // display: flex;
-  // background-color: var(--main-bg-color);
   width: 1px;
   margin: auto;
-  /* padding: 0 1rem; */
   border-left: 1rem solid var(--main-bg-color);
   border-right: 1rem solid var(--main-bg-color);
   flex-grow: 1;
   text-align: center;
   line-height: var(--main-height);
-  /* flex: 1; */
   overflow: hidden;
   white-space: nowrap;
   /* text-overflow: ellipsis; */
   z-index: 0;
+}
+
+.view-header {
+  display: flex;
+  background-color: var(--main-bg-color);
+  line-height: var(--main-height);
+  height: 100%;
+  padding-right: var(--main-height);
+}
+
+.view-caption {
+  flex: 1;
+  text-align: center;
 }
 
 @keyframes header-animation {

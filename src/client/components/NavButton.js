@@ -2,8 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Icon from './Icon';
 
-const NavButton = (props) => {
-  const { to, className, id, icon, exact, dataIndex } = props;
+const NavButton = ({ to, className, id, icon, exact, dataIndex }) => {
   return (
     <li className={className} id={id} data-index={dataIndex} draggable="false">
       <NavLink to={to} exact={exact}>

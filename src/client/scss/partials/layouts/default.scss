@@ -33,11 +33,16 @@ header {
   z-index: 1;
 }
 
-article {
+#content,
+.view {
   background-color: rgba(132, 156, 179, 0.5);
   grid-column: col-start / col-end;
   grid-row: row-header / row-nav;
   z-index: 1;
+}
+
+.view {
+  z-index: 11;
 }
 
 #ads {

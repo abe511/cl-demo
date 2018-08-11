@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 import Button from './Button';
 
-class Header extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -33,7 +33,13 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="main-wrapper">
+      <div
+        className={
+          this.props.activeView === 'main'
+            ? 'main-wrapper'
+            : 'main-wrapper wrapper-hide'
+        }
+      >
         <div
           className={
             this.state.searchActive
@@ -94,5 +100,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;

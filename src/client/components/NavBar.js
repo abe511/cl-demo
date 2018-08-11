@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter } from 'react-router-dom';
 import NavButton from './NavButton';
 
-class NavBar extends Component {
+export default class NavBar extends Component {
   constructor(props) {
     super(props);
 
@@ -22,6 +22,7 @@ class NavBar extends Component {
               id="home-button"
               icon="fa fa-home icon-shadow"
               dataIndex="0"
+              onClick={this.changeView}
             />
             <NavButton
               to="/messages"
@@ -49,7 +50,7 @@ class NavBar extends Component {
               className="navlink"
               id="map-button"
               icon="fa fa-map icon-shadow"
-              exact="true"
+              exact
               dataIndex="4"
             />
           </ul>
@@ -58,5 +59,3 @@ class NavBar extends Component {
     );
   }
 }
-
-export default NavBar;

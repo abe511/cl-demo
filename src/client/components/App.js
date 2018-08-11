@@ -1,50 +1,67 @@
 import React, { Component } from 'react';
-import { Route, HashRouter } from 'react-router-dom';
+import { Route, Switch, HashRouter as Router } from 'react-router-dom';
 import '../scss/style.scss';
 import Header from './Header';
 import NavBar from './NavBar';
+import ViewHeader from './views/ViewHeader';
 import Home from './views/Home';
 import Messages from './views/Messages';
 import NewEvent from './views/NewEvent';
 import Friends from './views/Friends';
 import Main from './views/Main';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      active: null
+      activeView: 'main'
     };
   }
 
   render() {
     return (
-      <div>
+      <Router>
         <div id="container">
           <header id="header">
-            <Header />
+            <Switch>
+              <Route
+                path="/home"
+                render={() => <ViewHeader caption="Home" />}
+              />
+              <Route
+                path="/messages"
+                render={() => <ViewHeader caption="Messages" />}
+              />
+              <Route
+                path="/event"
+                render={() => <ViewHeader caption="New Event" />}
+              />
+              <Route
+                path="/friends"
+                render={() => <ViewHeader caption="Friends" />}
+              />
+              <Route
+                path="/"
+                render={() => <Header activeView="main" />}
+                exact
+              />
+            </Switch>
           </header>
           <div id="top-bar">top bar</div>
           {/* VIEWS */}
           <aside id="sidebar">sidebar</aside>
-          <article id="content">
-            <main>
-              main content
-              <HashRouter>
-                <div>
-                  <Route path="/home" component={Home} />
-                  <Route path="/messages" component={Messages} />
-                  <Route path="/event" component={NewEvent} />
-                  <Route path="/friends" component={Friends} />
-                  <Route path="/" component={null} exact />
-                </div>
-              </HashRouter>
-              <section className="section" />
-              <section className="section" />
-              <section className="section" />
-            </main>
-          </article>
+          <main id="content">
+            <article>
+              <Switch>
+                <Route path="/home" component={Home} />
+                <Route path="/messages" component={Messages} />
+                <Route path="/event" component={NewEvent} />
+                <Route path="/friends" component={Friends} />
+                <Route path="/" component={Main} exact />
+              </Switch>
+            </article>
+          </main>
 
           <aside id="ads">ads</aside>
 
@@ -53,9 +70,7 @@ class App extends Component {
           </nav>
           <footer id="footer">footer</footer>
         </div>
-      </div>
+      </Router>
     );
   }
 }
-
-export default App;

@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Button = (props) => {
-  const { className, id, role, type, icon, onClick } = props;
+const Button = ({ className, id, role, type, icon, onClick }) => {
   return (
     <button
       className={className}
