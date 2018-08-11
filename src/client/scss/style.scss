@@ -54,7 +54,7 @@ $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [r
 
   header,
   #top-bar,
-  #content,
+  main,
   footer,
   nav {
     grid-column: col-side / col-ad;
@@ -74,7 +74,7 @@ $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [r
 
   header,
   #top-bar,
-  #content,
+  main,
   footer,
   nav {
     grid-column: col-main-start / col-main-end;

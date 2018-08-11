@@ -3,13 +3,43 @@ import Button from '../Button';
 
 const Home = () => {
   return (
-    <div>
-      <div className="view view-home">Home</div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad,
-      accusantium quia veniam unde adipisci ratione et neque magnam perferendis,
-      molestias nemo tenetur. Rem ad dolorum non, officia exercitationem
-      adipisci molestiae sint at? Sit eum tenetur magni ut repellat sequi fuga,
-      dicta ea laboriosam sint minus ab. Velit, blanditiis adipisci.
+    <div className="view">
+      <br />
+      Home <br />
+      Lorem ipsum dolor sit amet ia cumque ab cupiditate. Dicta, beatae. Vitae,
+      nostrum dolores illum maiores provident numquam quas veniam sit voluptate
+      ratione. Alias, corporis! Quasi sequi voluptate voluptatibus rerum esse,
+      deleniti totam deleniti laudantium modi perferendis. Amet corporis iure
+      cumque? Neque provident eos veritatis debitis! Possimus accusamus
+      similique laborum minima, dolorum praesentium. Eaque explicabo tempore aut
+      fuga tempora voluptatibus ratione inventore, culpa mollitia cumque ab
+      cupiditate. Dicta, beatae. Vitae, nostrum dolores illum maiores provident
+      numquam quas veniam sit voluptate ratione. Alias, corporis! Quasi sequi
+      voluptate voluptatibus rerum esse, deleniti totam deleniti laudantium modi
+      perferendis. Amet corporis iure cumque? Neque provident eos veritatis
+      debitis! Possimus accusamus similique laborum minima, dolorum praesentium.
+      Eaque explicabo tempore aut fuga tempora voluptatibus ratione inventore,
+      culpa mollitia cumque ab cupiditate. Dicta, beatae. Vitae, nostrum dolores
+      illum maiores provident numquam quas veniam sit voluptate ratione. Alias,
+      corporis! Quasi sequi voluptate voluptatibus rerum esse, deleniti totam
+      deleniti laudantium modi perferendis. Amet corporis iure cumque? Neque
+      provident eos veritatis debitis! Possimus accusamus similique laborum
+      minima, dolorum praesentium. Eaque explicabo tempore aut fuga tempora
+      voluptatibus ratione inventore, culpa mollitia cumque ab cupiditate.
+      Dicta, beatae. Vitae, nostrum dolores illum maiores provident numquam quas
+      veniam sit voluptate ratione. Alias, corporis! Quasi sequi voluptate
+      voluptatibus rerum esse, deleniti totam deleniti laudantium modi
+      perferendis. Amet corporis iure cumque? Neque provident eos veritatis
+      debitis! Possimus accusamus similique laborum minima, dolorum praesentium.
+      Eaque explicabo tempore aut fuga tempora voluptatibus ratione inventore,
+      culpa mollitia cumque ab cupiditate. Dicta, beatae. Vitae, nostrum dolores
+      illum maiores provident numquam quas veniam sit voluptate ratione. Alias,
+      corporis! Quasi sequi voluptate voluptatibus rerum esse, deleniti tempore
+      culpa enim inventore error, dolorem odit cupiditate magnam officia i
+      repellendus, perspiciatis laudantium inventore laborum numquam obcaecati
+      nulla est nemo consectetur accusamus! Cumque, est natus error atque labore
+      repellat architecto perferendis exercitationem numquam nam fuga neque
+      facilis, asperiores, rem quis iste.
     </div>
   );
 };
