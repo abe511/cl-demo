@@ -6,7 +6,9 @@
 @import 'partials/helpers/index';
 
 /*      DEFAULT LAYOUT (small screen)     */
+/*      sidebar and ads columns intersecting   */
 
+// setting up templates for the grid and feeding them to the media query mixin
 $grid-template-columns: '[col-start] auto [col-ad] auto [col-side] auto [col-end]';
 $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] auto [row-end]';
 
@@ -18,8 +20,8 @@ $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [r
 }
 
 /*      PHONES       */
-
-$grid-template-columns: '[col-start] 1fr [col-ad] 0 [col-side] 1fr [col-end]';
+/*      sidebar and ads columns share the width equally   */
+$grid-template-columns: '[col-start] 1fr [col-side] 0 [col-ad] 1fr [col-end]';
 $grid-template-rows: '[row-start] var(--main-height) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] auto [row-end]';
 
 @include mediaQuery(320px) {
