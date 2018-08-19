@@ -1,63 +1,91 @@
+// #map {
+//   grid-column: col-start / col-end;
+//   grid-row: row-start / row-end;
+//   z-index: 1;
+// }
+
 #container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  display: grid;
-  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background-color: rgba(175, 65, 142, 0.5);
 }
 
-#map {
-  grid-column: col-start / col-end;
-  grid-row: row-start / row-end;
-  z-index: 1;
+#top-grid {
+  display: grid;
+  width: 100%;
+  z-index: 1111;
 }
 
 header {
   background-color: rgb(160, 105, 105);
-  grid-column: col-start / col-end;
+  grid-column: col-left / col-right;
   grid-row: row-start / row-header;
   /* height: 100%; */
-  z-index: 1;
+  // z-index: 1111;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  width: 100%;
+  // height: 100%;
+  background-color: rgba(166, 121, 170, 0.5);
+  overflow-y: auto;
+  z-index: 10;
+  padding-bottom: var(--main-height);
 }
 
 #top-bar {
   background-color: rgba(187, 189, 100, 0.5);
   grid-column: col-start / col-end;
-  grid-row: row-header / row-top;
-  z-index: 111;
+  grid-row: row-start / row-top;
+  z-index: 1111;
 }
-
-#sidebar {
-  background-color: rgba(130, 168, 112, 0.3);
-  grid-column: col-start / col-side;
-  grid-row: row-header / row-nav;
+article {
+  grid-column: col-start / col-end;
+  grid-row: row-start / row-end;
+  overflow-y: auto;
   z-index: 11;
 }
 
-main {
-  background-color: rgba(166, 121, 170, 0.5);
-  grid-column: col-start / col-end;
-  grid-row: row-header / row-nav;
+#left-sidebar {
+  overflow-y: auto;
+  background-color: rgba(223, 185, 103, 0.3);
+  grid-column: col-start / col-left;
+  grid-row: row-start / row-end;
+  z-index: 111;
+}
+#right-sidebar {
+  overflow-y: auto;
+  background-color: rgba(223, 185, 103, 0.3);
+  grid-column: col-right / col-end;
+  grid-row: row-start / row-end;
+  z-index: 111;
+}
+
+#bottom-grid {
+  position: fixed;
+  bottom: 0px;
+  display: grid;
+  width: 100%;
   z-index: 1111;
 }
 
-#ads {
-  background-color: rgba(149, 82, 158, 0.3);
-  grid-column: col-end / col-ads;
-  grid-row: row-header / row-nav;
-  z-index: 11;
-}
-
 footer {
+  width: 100%;
   background-color: rgba(196, 175, 54, 0.5);
-  grid-column: col-start / col-end;
+  grid-column: col-left / col-right;
   grid-row: row-footer / row-nav;
-  z-index: 111;
-  /* margin: 0; */
+  // z-index: 111;
 }
 
 nav {
-  // background-color: rgb(101, 158, 47);
-  grid-column: col-start / col-end;
+  width: 100%;
+  background-color: rgb(101, 158, 47);
+  grid-column: col-left / col-right;
   grid-row: row-nav / row-end;
-  z-index: 1;
+  // z-index: 111111;
 }

@@ -24,6 +24,7 @@ export default class SearchBar extends Component {
   // sets the search term to empty string and keeps focus on it
   clearSearchInputField(event) {
     event.preventDefault();
+    this.searchInput.placeholder = 'Search';
     this.setState({ input: '' });
     this.searchInput.focus();
   }
@@ -76,7 +77,7 @@ export default class SearchBar extends Component {
             onClick={(event) => {
               event.preventDefault();
               if (!this.props.searchHandle(this.state.input)) {
-                this.searchInput.placeholder = 'Please enter a search term';
+                this.searchInput.placeholder = 'Enter a search term';
               }
               if (!this.state.focus) {
                 this.searchInput.focus();
@@ -107,7 +108,9 @@ export default class SearchBar extends Component {
               maxLength="111"
               aria-label="Search by name or hashtag"
               value={this.state.input}
-              ref={(element) => (this.searchInput = element)}
+              ref={(element) => {
+                this.searchInput = element;
+              }}
               onChange={this.onSearchInputChange}
               onKeyDown={(event) => {
                 if (event.keyCode === 13) {

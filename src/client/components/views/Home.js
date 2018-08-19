@@ -14,11 +14,15 @@ class Home extends Component {
 
   update(e) {
     this.setState({ type: e.type, scrolling: true });
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       this.setState({ scrolling: false });
       console.log(this.state.scrolling);
     }, 1000);
     console.log(this.state.scrolling);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timer);
   }
 
   render() {

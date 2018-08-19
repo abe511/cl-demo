@@ -3,6 +3,7 @@ import { Route, Switch, HashRouter as Router } from 'react-router-dom';
 import '../scss/style.scss';
 import Header from './Header';
 import NavBar from './NavBar';
+import Ads from './views/Ads';
 import ViewHeader from './views/ViewHeader';
 import Home from './views/Home';
 import Messages from './views/Messages';
@@ -23,35 +24,37 @@ export default class App extends Component {
     return (
       <Router>
         <div id="container">
-          <header id="header">
-            <Switch>
-              <Route
-                path="/home"
-                render={() => <ViewHeader caption="Home" />}
-              />
-              <Route
-                path="/messages"
-                render={() => <ViewHeader caption="Messages" />}
-              />
-              <Route
-                path="/event"
-                render={() => <ViewHeader caption="New Event" />}
-              />
-              <Route
-                path="/friends"
-                render={() => <ViewHeader caption="Friends" />}
-              />
-              <Route
-                path="/"
-                render={() => <Header activeView="main" />}
-                exact
-              />
-            </Switch>
-          </header>
-          <div id="top-bar">top bar</div>
+          <div id="top-grid">
+            <header>
+              <Switch>
+                <Route
+                  path="/home"
+                  render={() => <ViewHeader caption="Home" />}
+                />
+                <Route
+                  path="/messages"
+                  render={() => <ViewHeader caption="Messages" />}
+                />
+                <Route
+                  path="/event"
+                  render={() => <ViewHeader caption="New Event" />}
+                />
+                <Route
+                  path="/friends"
+                  render={() => <ViewHeader caption="Friends" />}
+                />
+                <Route
+                  path="/"
+                  render={() => <Header activeView="main" />}
+                  exact
+                />
+              </Switch>
+            </header>
+          </div>
           {/* VIEWS */}
-          <aside id="sidebar">sidebar</aside>
-          <main id="content">
+          <main>
+            <div id="top-bar">top bar</div>
+            <aside id="left-sidebar">left sidebar</aside>
             <article>
               <Switch>
                 <Route path="/home" component={Home} />
@@ -61,14 +64,16 @@ export default class App extends Component {
                 <Route path="/" component={Main} exact />
               </Switch>
             </article>
+            <aside id="right-sidebar">
+              <Ads />
+            </aside>
           </main>
-
-          <aside id="ads">ads</aside>
-
-          <nav id="nav">
-            <NavBar />
-          </nav>
-          <footer id="footer">footer</footer>
+          <div id="bottom-grid">
+            <footer id="footer">footer</footer>
+            <nav id="nav">
+              <NavBar />
+            </nav>
+          </div>
         </div>
       </Router>
     );

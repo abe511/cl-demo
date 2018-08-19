@@ -36,8 +36,8 @@ export default class Header extends Component {
       <div
         className={
           this.props.activeView === 'main'
-            ? 'main-wrapper'
-            : 'main-wrapper wrapper-hide'
+            ? 'top-wrapper'
+            : 'top-wrapper wrapper-hide'
         }
       >
         <div

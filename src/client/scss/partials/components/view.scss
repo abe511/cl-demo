@@ -4,5 +4,15 @@
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  height: calc(100vh - var(--main-height) * 2);
+  //   height: calc(100vh - var(--main-height) * 2);
+}
+
+.view-ads {
+  //   background-color: var(--main-bg-color);
+  background-color: rgba(194, 194, 219, 0.733);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  //   height: 500px;
+  // height: calc(100vh - var(--main-height) * 2);
 }

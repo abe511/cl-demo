@@ -3,6 +3,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>cl demo</title>
 <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
@@ -11,7 +12,122 @@
 <div id="app"></div>
 <!-- <button class="button">click</button> -->
 <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+<script>
 
+    // var element = document.querySelector("#bottom-grid");
+    // var bounding = element.getBoundingClientRect();
+
+    // console.log(bounding);
+
+    // if (
+    //     bounding.top >= 0 &&
+    //     bounding.left >= 0 &&
+    //     bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+    //     bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    // ) {
+    //     console.log('in');
+    //     element.style.top = (window.innerHeight - document.body.style.getPropertyValue('--main-height')) + 'px';
+    // } else {
+    //     console.log('out');
+
+    // }
+
+
+    // window.onchange
+    //     = function (e) {
+    //         console.log(e);
+    //     };
+    // window.onscroll = function () { myFunction() };
+
+    // function myFunction() {
+    //     console.log("scrolling");
+
+    //     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    //         document.querySelector("#bottom-grid").classList.add = "lifted";
+    //     } else {
+    //         document.querySelector("#bottom-grid").classList.remove = "lifted";
+    //     }
+    // }
+
+
+
+    // (function () {
+    //     var width = window.innerWidth
+    //         || document.documentElement.clientWidth
+    //         || document.body.clientWidth;
+
+    //     var height = window.innerHeight
+    //         || document.documentElement.clientHeight
+    //         || document.body.clientHeight;
+
+    //     const initialHeight = window.outerHeight;
+
+    //     if (window.innerHeight < document.body.clientHeight) {
+    //         document.querySelector("#spacer").style.setProperty('--spacer-height', (document.body.clientHeight - window.outerHeight) + "px");
+    //     }
+    //     window.ondragstart = function () {
+    //         document.querySelector("#spacer").style.setProperty('--spacer-height', (document.body.clientHeight - window.outerHeight) + "px");
+    //         console.log("scrolling");
+    //     };
+    //     window.onchange = function () {
+    //         document.querySelector("#spacer").style.setProperty('--spacer-height', (document.body.clientHeight - window.outerHeight) + "px");
+    //         console.log("scrolling");
+    //     };
+
+
+        // document.querySelector("#container").addEventListener("onscroll", function () { document.querySelector("#spacer").style.setProperty('--spacer-height', (document.body.clientHeight - window.innerHeight) + "px"); });
+        // document.querySelector("#container").addEventListener("onchange", function () { document.querySelector("#spacer").style.setProperty('--spacer-height', (document.body.clientHeight - window.innerHeight) + "px"); });
+
+
+    // })();
+
+
+
+    // function calcVH() {
+    //     var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+        //     document.getElementById("app").setAttribute("style", "--viewport-height:" + vH + "px;");
+
+    //     document.getElementById("app").style.setProperty("--viewport-height", vH + "px");
+
+    // }
+    // calcVH();
+    // window.addEventListener('orientationchange', calcVH, true);
+    // window.addEventListener('onscroll', calcVH, true);
+    // window.addEventListener('onresize', calcVH, true);
+    // window.addEventListener('orientationchangeend', calcVH, true);
+
+    // (function () {
+    //     document.querySelector("#container").style.setProperty('--viewport-height', window.innerHeight + "px");
+    //     window.addEventListener("resize onorientationchange", function () {
+    //         document.querySelector("#container").style.setProperty('height', window.innerHeight + "px");
+    //         console.log(window.screen.orientation);
+    //         console.log(window.screenX);
+    //         console.log(window.screenY);
+    //         console.log(window.screen.height);
+    //         console.log(window.screen.width);
+    //         console.log(window.innerHeight);
+    //         console.log(window.innerWidth);
+    //     }, true);
+    //     window.addEventListener("onorientationchange", function () {
+    //         document.querySelector("#container").style.setProperty('height', window.innerHeight + "px");
+    //         console.log(window.screen.orientation);
+    //         console.log(window.screenX);
+    //         console.log(window.screenY);
+    //         console.log(window.screen.height);
+    //         console.log(window.screen.width);
+    //         console.log(window.innerHeight);
+    //         console.log(window.innerWidth);
+    //     }, true);
+    // })();
+
+
+    // (function () {
+    //     if (window.innerHeight < window.screen.height) {
+    //         document.querySelector("#spacer").style.setProperty('--spacer-height', (window.screen.height - window.innerHeight) + "px");
+    //     }
+    // })();
+</script>
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUiIsJnNNvqRwhcxa78JpnnLx7cwlnNNI&library=drawing,geometry&callback=initMap">
 </script> -->
 

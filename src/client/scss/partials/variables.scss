@@ -1,11 +1,14 @@
 // CUSTOM PROPERTIES
 :root {
   --main-bg-color: rgb(255, 255, 255);
-  --main-height: 2rem;
+  --main-height: 3rem;
   // --main-height: calc((10vh+10vw)/2);
   --button-color: #555;
   --button-hover-color: #aaa;
   --button-active-color: rgb(20, 20, 20);
+  --font-size: 1rem;
+  --button-font-size: 0.5rem;
+  --button-icon-size: 1rem;
   --field-font-color: rgb(100, 100, 100);
   --field-placeholder-color: #aaa;
   --field-underline-color: #ddd;
@@ -13,3 +16,5 @@
   --scrollbar-width: 0.5rem;
   --scrollbar-color: rgba(100, 100, 100, 0.5);
 }
+
+/* TODO:    themeing (day and night themes)*/

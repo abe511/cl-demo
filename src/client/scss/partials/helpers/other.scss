@@ -13,7 +13,7 @@
 
 .form-text {
   color: var(--field-font-color);
-  /* font-size: 1rem; */
+  font-size: var(--font-size);
   text-align: center;
 }
 
@@ -25,17 +25,6 @@
     border-bottom: 1px solid var(--field-underline-color-active);
   }
 }
-
-/* .profile a {
-    font-size: var(--main-height);
-    color: grey;
-    text-align: center;
-    background-color: rgb(196, 6, 6);
-} */
-
-// .active {
-//   z-index: 1;
-// }
 
 // MAP CLEANUP
 .gm-style-cc,

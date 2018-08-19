@@ -1,13 +1,29 @@
-// this receives min width or min and max as arguments
+// this receives width or height as first argument, then min or max or both
 @mixin mediaQuery($args...) {
-  @if length($args) == 1 {
-    @media screen and (min-width: nth($args, 1)) {
-      @content;
+  // width
+  @if nth($args, 1) == 'width' {
+    @if length($args) == 2 {
+      @media screen and (min-width: nth($args, 2)) {
+        @content;
+      }
+    }
+    @if length($args) == 3 {
+      @media screen and (min-width: nth($args, 2)) and (max-width: nth($args, 3)) {
+        @content;
+      }
     }
   }
-  @if length($args) == 2 {
-    @media screen and (min-width: nth($args, 1)) and (max-width: nth($args, 2)) {
-      @content;
+  // height
+  @if nth($args, 1) == 'height' {
+    @if length($args) == 2 {
+      @media screen and (min-height: nth($args, 2)) {
+        @content;
+      }
+    }
+    @if length($args) == 3 {
+      @media screen and (min-height: nth($args, 2)) and (max-height: nth($args, 3)) {
+        @content;
+      }
     }
   }
 }
